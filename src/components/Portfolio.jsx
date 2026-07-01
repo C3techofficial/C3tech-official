@@ -1,57 +1,85 @@
+import theWedsImg from "../thewedsmemories.png";
+import evCafeImg from "../theevcafe.png";
+
 const PROJECTS = [
   {
-    colorClass: "c3-pi-c1",
-    cat: "Business Website · SEO",
-    title: "Agarwal Trading Co. — Corporate Site",
+    title: "The Weds Memories",
+    category: "Wedding Photography & Cinematography",
+    description:
+      "A premium wedding photography and cinematography website featuring elegant galleries, storytelling experiences, and enquiry forms.",
+    tech: ["React", "Responsive Design", "UI/UX"],
+    image: theWedsImg,
+    live: "https://www.thewedsmemories.com",
   },
   {
-    colorClass: "c3-pi-c2",
-    cat: "Portfolio",
-    title: "Priya Mehta — Design Portfolio",
-  },
-  {
-    colorClass: "c3-pi-c3",
-    cat: "Pvt. Ltd. Website",
-    title: "NovaTech Solutions Pvt. Ltd.",
-  },
-  {
-    colorClass: "c3-pi-c4",
-    cat: "Digital Marketing",
-    title: "Kashi Sweets — Google Ads Campaign",
+    title: "The EV Cafe",
+    category: "Electric Vehicle Community Platform",
+    description:
+      "India's premium EV charging and wellness café platform with modern design, responsive experience, and interactive sections.",
+    tech: ["React", "Modern UI", "Responsive Design"],
+    image: evCafeImg,
+    live: "https://www.theevcafe.com",
   },
 ];
 
 export default function Portfolio() {
   return (
-    <section className="c3-section" id="portfolio">
-      <div className="c3-portfolio-header">
-        <div>
-          <div className="c3-section-label">Our Work</div>
-          <h2 className="c3-h2">
-            Projects We're
-            <br />
-            Proud Of
-          </h2>
-        </div>
-        <a
-          className="c3-btn-secondary"
-          onClick={() =>
-            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          Start Your Project →
-        </a>
+    <section className="c3-section portfolio-section" id="portfolio">
+      <div className="c3-section-header">
+        <span className="c3-section-label">
+          Our Work
+        </span>
+
+        <h2 className="c3-h2">
+          Featured Projects
+        </h2>
+
+        <p className="c3-section-sub">
+          Real-world websites designed and developed by
+          C3Tech for businesses and brands.
+        </p>
       </div>
 
-      <div className="c3-portfolio-grid">
-        {PROJECTS.map((p, i) => (
-          <div className="c3-portfolio-item" key={i}>
-            <div className={`c3-pi-bg ${p.colorClass}`}>
-              <div className="c3-pi-overlay" />
-              <div className="c3-pi-content">
-                <div className="c3-pi-cat">{p.cat}</div>
-                <div className="c3-pi-title">{p.title}</div>
+      <div className="portfolio-grid">
+        {PROJECTS.map((project) => (
+          <div
+            className="portfolio-card"
+            key={project.title}
+          >
+            <div className="portfolio-image">
+              <img
+                src={project.image}
+                alt={project.title}
+              />
+            </div>
+
+            <div className="portfolio-content">
+              <p className="portfolio-category">
+                {project.category}
+              </p>
+
+              <h3>{project.title}</h3>
+
+              <p className="portfolio-description">
+                {project.description}
+              </p>
+
+              <div className="portfolio-tech">
+                {project.tech.map((item) => (
+                  <span key={item}>
+                    {item}
+                  </span>
+                ))}
               </div>
+
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noreferrer"
+                className="portfolio-btn"
+              >
+                View Live Website →
+              </a>
             </div>
           </div>
         ))}

@@ -22,7 +22,7 @@ export default function Hero() {
 
         <div className="c3-hero-actions">
           <a
-            href="https://wa.me/919999999999?text=Hi%20C3Tech%2C%20I%20want%20a%20website!"
+            href="https://wa.me/918505960012?text=Hi%20C3Tech%2C%20I%20want%20a%20website!"
             className="c3-btn-primary"
             target="_blank"
             rel="noreferrer"

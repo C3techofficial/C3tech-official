@@ -2,7 +2,7 @@ const INFO = [
   { label: "Location",      val: "Varanasi, Uttar Pradesh" },
   { label: "Response Time", val: "Within 2 Hours" },
   { label: "Working Hours", val: "Mon – Sat, 9am – 8pm" },
-  { label: "Email",         val: "hello@c3tech.in" },
+  { label: "Email",         val: "C3tech.official@gmail.com" },
 ];
 
 export default function ContactCTA() {
@@ -28,7 +28,7 @@ export default function ContactCTA() {
 
       <div className="c3-contact-actions">
         <a
-          href="https://wa.me/919999999999?text=Hi%20C3Tech%2C%20I%20want%20to%20discuss%20my%20project!"
+          href="https://wa.me/918505960012?text=Hi%20C3Tech%2C%20I%20want%20to%20discuss%20my%20project!"
           className="c3-btn-wa"
           target="_blank"
           rel="noreferrer"
@@ -38,7 +38,7 @@ export default function ContactCTA() {
           </svg>
           Chat on WhatsApp
         </a>
-        <a href="mailto:hello@c3tech.in" className="c3-btn-outline-white">
+        <a href="mailto:c3Tech.official@gmail.com" className="c3-btn-outline-white">
           📧 Email Us
         </a>
       </div>

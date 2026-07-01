@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const CONTACT_DETAILS = [
   { icon: "📍", label: "Location",      val: "Varanasi, Uttar Pradesh" },
-  { icon: "💬", label: "WhatsApp",      val: "+91 99999 99999" },
-  { icon: "📧", label: "Email",         val: "hello@c3tech.in" },
+  { icon: "💬", label: "WhatsApp",      val: "+91 8505960012" },
+  { icon: "📧", label: "Email",         val: "c3Tech.official@gmail.com" },
   { icon: "⏰", label: "Working Hours", val: "Mon – Sat, 9am – 8pm" },
 ];
 
@@ -40,7 +40,7 @@ export default function ContactForm() {
         <div className="c3-cform-info">
           <h3>We'd love to hear from you</h3>
           <p>
-            Fill out the form and our team will get back to you within 2 hours.
+            Fill out the form and our team will get back to you within 4hours.
             Or just message us directly on WhatsApp for an instant reply.
           </p>
           <div className="c3-cform-details">
@@ -133,7 +133,7 @@ export default function ContactForm() {
                 For faster response, WhatsApp us directly.
               </p>
               <a
-                href="https://wa.me/919999999999?text=Hi%20C3Tech!"
+                href="https://wa.me/918505960012?text=Hi%20C3Tech!"
                 className="c3-btn-wa"
                 style={{ display: "inline-flex", marginTop: "1.5rem" }}
                 target="_blank"
