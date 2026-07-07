@@ -1,3 +1,4 @@
+import logo from "../assets/c3tech-logo.png";
 export default function Hero() {
   return (
     <section className="c3-hero" id="hero">
@@ -66,19 +67,31 @@ export default function Hero() {
                 justifyContent: "center",
               }}
             >
-              <div style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "3.5rem", marginBottom: "1rem" }}>⬡</div>
-                <div
-                  style={{
-                    fontSize: "0.75rem",
-                    color: "rgba(255,255,255,0.3)",
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  C3Tech Studio
-                </div>
-              </div>
+ <div style={{ textAlign: "center" }}>
+  <img
+    src={logo}
+    alt="C3Tech Logo"
+    style={{
+      width: "170px",
+      maxWidth: "100%",
+      height: "auto",
+      objectFit: "contain",
+      marginBottom: "16px",
+      filter: "drop-shadow(0 10px 25px rgba(0,0,0,0.25))",
+    }}
+  />
+
+  <div
+  style={{
+  width: "170px",
+  height: "auto",
+  objectFit: "contain",
+  marginBottom: "16px",
+  filter: "drop-shadow(0 15px 30px rgba(212,175,55,.45))",
+  transition: "transform .4s ease",
+}}
+/>
+</div>
             </div>
             <div className="c3-hcard-main-inner">
               <div className="c3-hcard-tag">Latest Project</div>
