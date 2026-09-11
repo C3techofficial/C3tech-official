@@ -17,7 +17,7 @@ const SERVICES = [
       "E-commerce",
       "Pvt. Ltd. Sites",
     ],
-    price: "₹7,999",
+    price: "₹11,999*+Domain+Hoisting",
   },
   {
     num: "02",
@@ -31,7 +31,7 @@ const SERVICES = [
       "Developers",
       "Professionals",
     ],
-    price: "₹3,999",
+    price: "₹4,999+Domain+Hoisting",
   },
   {
     num: "03",
@@ -45,7 +45,7 @@ const SERVICES = [
       "Meta Ads",
       "Social Media",
     ],
-    price: "₹5,999/mo",
+    price: "₹9,999/mo",
   },
 ];
 
