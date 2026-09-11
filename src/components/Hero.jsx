@@ -94,11 +94,11 @@ export default function Hero() {
 </div>
             </div>
             <div className="c3-hcard-main-inner">
-              <div className="c3-hcard-tag">Latest Project</div>
+              <div className="c3-hcard-tag">Upcoming Project</div>
               <div className="c3-hcard-title">
-                Sharma &amp; Associates
+                Divyam
                 <br />
-                Law Firm Website
+                Astrology • Guidance • Insights ✨
               </div>
               <div className="c3-hcard-sub">Website + SEO + Google Ads</div>
             </div>
