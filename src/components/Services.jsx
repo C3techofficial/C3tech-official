@@ -17,7 +17,7 @@ const SERVICES = [
       "E-commerce",
       "Pvt. Ltd. Sites",
     ],
-    price: "₹11,999*+Domain+Hoisting",
+    price: "₹11,999+Domain+Hoisting",
   },
   {
     num: "02",
