@@ -1,13 +1,9 @@
-import {
-  FaCode,
-  FaLaptopCode,
-  FaBullhorn,
-} from "react-icons/fa";
+import { FiCode, FiMonitor, FiTrendingUp } from "react-icons/fi";
 
 const SERVICES = [
   {
     num: "01",
-    icon: <FaCode />,
+    icon: <FiCode aria-hidden="true" />,
     title: "Website Design & Development",
     desc:
       "Custom-designed websites for businesses, startups, and institutions. Fast, mobile-friendly, and built to convert visitors into customers.",
@@ -21,7 +17,7 @@ const SERVICES = [
   },
   {
     num: "02",
-    icon: <FaLaptopCode />,
+    icon: <FiMonitor aria-hidden="true" />,
     title: "Personal Portfolio Websites",
     desc:
       "Showcase your skills, work, and achievements with a stunning personal portfolio. Perfect for freelancers, professionals, and job seekers.",
@@ -35,7 +31,7 @@ const SERVICES = [
   },
   {
     num: "03",
-    icon: <FaBullhorn />,
+    icon: <FiTrendingUp aria-hidden="true" />,
     title: "Digital Marketing",
     desc:
       "Grow your audience and increase sales with targeted SEO, Google Ads, Meta Ads, and social media management that delivers real results.",

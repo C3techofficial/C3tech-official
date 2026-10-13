@@ -1,23 +1,23 @@
 const REVIEWS = [
   {
     text: '"C3Tech built our company website in just 10 days. The design is clean, professional, and our enquiries have doubled since launch. Highly recommended!"',
-    name: "Rohit Sharma",
-    role: "Director, NovaTech Solutions Pvt. Ltd.",
-    initials: "RS",
+    name: "Aditya Maurya",
+    role: "CEO of TheEvCafe",
+    initials: "AM",
     avatarBg: "#1a1a2e",
   },
   {
     text: '"My portfolio website got me 3 freelance clients within the first month. Ritik understood exactly what I needed — great work at a great price!"',
-    name: "Priya Mehta",
-    role: "Freelance Graphic Designer, Delhi",
-    initials: "PM",
+    name: "Santosh Ji",
+    role: "Owner of The WedsMemories",
+    initials: "SJ",
     avatarBg: "#2d6a4f",
   },
   {
     text: '"Their Google Ads management brought us 5x more customers in 2 months. The team is responsive, honest, and genuinely cares about results."',
-    name: "Arun Kumar",
-    role: "Owner, Kashi Sweets, Varanasi",
-    initials: "AK",
+    name: "Satyam Seth",
+    role: "Owner of Satya Jwellers",
+    initials: "SS",
     avatarBg: "#c8a96e",
   },
 ];

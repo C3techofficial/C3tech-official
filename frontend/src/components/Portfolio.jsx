@@ -78,7 +78,7 @@ export default function Portfolio() {
                 rel="noreferrer"
                 className="portfolio-btn"
               >
-                View Live Website and responsive experience
+                View Live Project →
               </a>
             </div>
           </div>

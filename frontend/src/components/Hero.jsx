@@ -1,4 +1,7 @@
 import logo from "../assets/c3tech-logo.png";
+import { FiTrendingUp } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
+
 export default function Hero() {
   return (
     <section className="c3-hero" id="hero">
@@ -28,7 +31,8 @@ export default function Hero() {
             target="_blank"
             rel="noreferrer"
           >
-            💬 Chat on WhatsApp
+            <FaWhatsapp aria-hidden="true" />
+            Chat on WhatsApp
           </a>
           <a
             className="c3-btn-secondary"
@@ -98,7 +102,7 @@ export default function Hero() {
               <div className="c3-hcard-title">
                 Divyam
                 <br />
-                Astrology • Guidance • Insights ✨
+                Astrology · Guidance · Insights
               </div>
               <div className="c3-hcard-sub">Website + SEO + Google Ads</div>
             </div>
@@ -106,7 +110,9 @@ export default function Hero() {
 
           {/* Overlay card */}
           <div className="c3-hcard c3-hcard-overlay">
-            <div className="c3-hcard-icon">📈</div>
+            <div className="c3-hcard-icon" aria-hidden="true">
+              <FiTrendingUp />
+            </div>
             <div className="c3-hcard-overlay-title">Digital Marketing</div>
             <div className="c3-hcard-overlay-sub">SEO · Ads · Social Media</div>
           </div>

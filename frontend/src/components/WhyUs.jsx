@@ -1,26 +1,34 @@
+import {
+  FiClock,
+  FiMessageCircle,
+  FiSmartphone,
+  FiDollarSign,
+  FiTool,
+} from "react-icons/fi";
+
 const REASONS = [
   {
-    icon: "🚀",
+    icon: <FiClock aria-hidden="true" />,
     title: "Fast Delivery",
     desc: "Most websites are delivered within 7–14 days. No endless delays, no excuses.",
   },
   {
-    icon: "💬",
+    icon: <FiMessageCircle aria-hidden="true" />,
     title: "Direct Communication",
     desc: "You talk directly with the team — no middlemen, no confusion, just clarity.",
   },
   {
-    icon: "📱",
+    icon: <FiSmartphone aria-hidden="true" />,
     title: "Mobile-First Design",
     desc: "Every website we build looks perfect on all screens — phone, tablet, desktop.",
   },
   {
-    icon: "💰",
+    icon: <FiDollarSign aria-hidden="true" />,
     title: "Transparent Pricing",
     desc: "No hidden charges. You know exactly what you're paying for before we start.",
   },
   {
-    icon: "🔧",
+    icon: <FiTool aria-hidden="true" />,
     title: "Ongoing Support",
     desc: "30 days free support after launch, plus affordable maintenance plans.",
   },
@@ -48,7 +56,7 @@ export default function WhyUs() {
         <div className="c3-why-list">
           {REASONS.map((r) => (
             <div className="c3-why-item" key={r.title}>
-              <div className="c3-why-icon">{r.icon}</div>
+              <div className="c3-why-icon" aria-hidden="true">{r.icon}</div>
               <div>
                 <h4>{r.title}</h4>
                 <p>{r.desc}</p>
