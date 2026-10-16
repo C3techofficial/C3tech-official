@@ -46,15 +46,17 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 CLIENT_URL=http://localhost:5173
 ALLOWED_ORIGINS=http://localhost:5173
+EMAIL_PROVIDER=smtp
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your_sending_email@gmail.com
 SMTP_PASS=your_email_app_password
 EMAIL_FROM="C3Tech <your_sending_email@gmail.com>"
 ADMIN_EMAIL=your_admin_email@gmail.com
+RESEND_API_KEY=re_your_resend_api_key
 ```
 
-The contact form sends new inquiries to `ADMIN_EMAIL` and sends a confirmation to the visitor. For Gmail, use an App Password for `SMTP_PASS`; do not use your regular account password. Configure these email variables in the Render service as well as in local `server/.env`.
+The contact form sends new inquiries to `ADMIN_EMAIL` and sends a confirmation to the visitor. Local development uses SMTP by default. For Gmail, use an App Password for `SMTP_PASS`; do not use your regular account password.
 
 ## Deployment
 
@@ -75,12 +77,12 @@ The contact form sends new inquiries to `ADMIN_EMAIL` and sends a confirmation t
   - `MONGO_URI=your_mongodb_connection_string`
   - `CLIENT_URL=https://your-vercel-app.vercel.app`
   - `ALLOWED_ORIGINS=https://your-vercel-app.vercel.app,http://localhost:5173`
-  - `SMTP_HOST=smtp.gmail.com`
-  - `SMTP_PORT=587`
-  - `SMTP_USER=your_sending_email@gmail.com`
-  - `SMTP_PASS=your_email_app_password`
-  - `EMAIL_FROM="C3Tech <your_sending_email@gmail.com>"`
+  - `EMAIL_PROVIDER=resend`
+  - `RESEND_API_KEY=re_your_resend_api_key`
+  - `EMAIL_FROM="C3Tech <verified-sender@your-domain.com>"`
   - `ADMIN_EMAIL=your_admin_email@gmail.com`
+
+For Render, create a Resend API key and verify the sending domain used by `EMAIL_FROM` in Resend. Set `EMAIL_PROVIDER=resend` in the Render service and redeploy; the Resend API sends over HTTPS instead of SMTP. Keep `EMAIL_PROVIDER=smtp` in local `server/.env` if you want to continue using your existing local SMTP setup.
 
 ## Notes
 
