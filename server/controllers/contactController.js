@@ -4,6 +4,27 @@ const {
   sendConfirmationEmail,
 } = require("../utils/emailService");
 
+const sendContactEmails = async (payload) => {
+  const [adminEmailResult, confirmationEmailResult] = await Promise.all([
+    sendAdminNotificationEmail(payload),
+    sendConfirmationEmail({
+      name: payload.name,
+      email: payload.email,
+      service: payload.service,
+      budget: payload.budget,
+      message: payload.message,
+    }),
+  ]);
+
+  if (!adminEmailResult.sent) {
+    console.error("Admin notification email was not sent:", adminEmailResult.reason);
+  }
+
+  if (!confirmationEmailResult.sent) {
+    console.error("Contact confirmation email was not sent:", confirmationEmailResult.reason);
+  }
+};
+
 const createContact = async (req, res) => {
   try {
     const payload = {
@@ -17,26 +38,14 @@ const createContact = async (req, res) => {
 
     const contact = await Contact.create(payload);
 
-    const [adminEmailResult, confirmationEmailResult] = await Promise.all([
-      sendAdminNotificationEmail(payload),
-      sendConfirmationEmail({
-        name: payload.name,
-        email: payload.email,
-        service: payload.service,
-        budget: payload.budget,
-        message: payload.message,
-      }),
-    ]);
-
     res.status(201).json({
       success: true,
-      message: adminEmailResult.sent
-        ? "Message Sent Successfully"
-        : "Message saved, but the admin email notification could not be sent",
+      message: "Message received successfully",
       data: contact,
-      emailSent: adminEmailResult.sent,
-      adminEmailSent: adminEmailResult.sent,
-      confirmationEmailSent: confirmationEmailResult.sent,
+    });
+
+    sendContactEmails(payload).catch((error) => {
+      console.error("Contact notification emails could not be sent:", error);
     });
   } catch (error) {
     res.status(500).json({

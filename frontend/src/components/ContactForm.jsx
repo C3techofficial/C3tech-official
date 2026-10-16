@@ -23,7 +23,6 @@ const API_BASE_URL = (import.meta.env.VITE_API_URL || "http://localhost:5000").r
 export default function ContactForm() {
   const [form, setForm] = useState(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
-  const [adminEmailSent, setAdminEmailSent] = useState(true);
   const [isSending, setIsSending] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
@@ -56,7 +55,6 @@ export default function ContactForm() {
         throw new Error(result.message || "Unable to send your message.");
       }
 
-      setAdminEmailSent(result.adminEmailSent);
       setSubmitted(true);
       setForm(INITIAL_FORM);
     } catch (error) {
@@ -213,19 +211,12 @@ export default function ContactForm() {
                 </svg>
               </div>
               <p className="c3-cform-success-eyebrow">
-                {adminEmailSent ? "INQUIRY RECEIVED" : "MESSAGE SAVED"}
+                INQUIRY RECEIVED
               </p>
-              <h4>{adminEmailSent ? "Thanks for reaching out." : "We've saved your message."}</h4>
+              <h4>Thanks for reaching out.</h4>
               <p className="c3-cform-success-copy">
-                {adminEmailSent
-                  ? "Your project details are with our team. We'll be in touch within two hours."
-                  : "Our team couldn't be notified by email. Please contact us directly and we'll be happy to help."}
+                Your project details have been received. We'll be in touch within two hours.
               </p>
-              {!adminEmailSent && (
-                <a className="c3-cform-email-link" href="mailto:c3Tech.official@gmail.com">
-                  c3Tech.official@gmail.com
-                </a>
-              )}
               <a
                 href="https://wa.me/918505960012?text=Hi%20C3Tech!"
                 className="c3-btn-wa c3-cform-success-cta"
@@ -239,7 +230,6 @@ export default function ContactForm() {
                 type="button"
                 onClick={() => {
                   setSubmitted(false);
-                  setAdminEmailSent(true);
                 }}
               >
                 Send another inquiry
